@@ -16,7 +16,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".DialogList"/>
+
         <activity android:name=".SignIn"/>
+
     </application>
 
 </manifest>
