@@ -30,7 +30,7 @@
 
     <TableRow>
         <Button
-            android:id="@+id/signupButton"
+            android:id="@+id/signup_Button"
             android:text="Sign up"
             android:layout_span="2"/>
     </TableRow>
