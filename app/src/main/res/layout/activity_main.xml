@@ -41,6 +41,6 @@
             android:id="@+id/signup"
             android:layout_height="wrap_content"
             android:layout_span="2"
-            android:text="SIGN IN"/>
+            android:text="SIGN UP"/>
     </TableRow>
 </TableLayout>
