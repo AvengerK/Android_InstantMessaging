@@ -38,8 +38,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        String account = ((EditText)findViewById(R.id.account)).getText().toString();
+        String password = ((EditText)findViewById(R.id.password)).getText().toString();
     }
 
-    String account = ((EditText)findViewById(R.id.account)).getText().toString();
-    String password = ((EditText)findViewById(R.id.password)).getText().toString();
+
 }
