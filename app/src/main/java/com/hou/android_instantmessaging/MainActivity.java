@@ -14,6 +14,7 @@ import android.widget.Toast;
  * Created by 凌霄 on 2016/3/13.
  */
 public class MainActivity extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -59,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
             case 1:
                 if(resultCode == RESULT_OK){
 //                    final String account = data.getStringExtra("account");
-//                    final String passworf = data.getStringExtra("password");
+//                    final String password = data.getStringExtra("password");
                     account = data.getStringExtra("account");
                     password = data.getStringExtra("password");
                 }
@@ -69,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     protected void logIn(String inputAccount,String inputPassword){
-        if(inputAccount == account && inputPassword == password){
+        if(inputAccount.equals(account) && inputPassword.equals(password)){
             Intent intent = new Intent(MainActivity.this,DialogList.class);
             startActivity(intent);
         }
