@@ -1,4 +1,4 @@
-package com.hou.android_instantmessaging;
+package com.hou.android_instantmessaging.toolClass;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -6,6 +6,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+
+import com.hou.android_instantmessaging.R;
+import com.hou.android_instantmessaging.toolClass.Friend;
 
 import java.util.List;
 

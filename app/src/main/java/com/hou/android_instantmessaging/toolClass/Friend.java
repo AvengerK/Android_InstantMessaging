@@ -1,4 +1,4 @@
-package com.hou.android_instantmessaging;
+package com.hou.android_instantmessaging.toolClass;
 
 /**
  * Created by 凌霄 on 2016/3/18.
