@@ -7,20 +7,27 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by 凌霄 on 2016/3/13.
  */
 public class DialogList extends AppCompatActivity {
 
-    private String [] dialog = {"蛤蛤","吼啊","资瓷","长者","华莱士","大新闻","谈笑风生","批判","跑得快","西方国家","excited","闷声","发大财","无可奉告","负责任","professor","赛艇","天气晴朗","微小工作","另请高明","念两句诗","历史进程","个人奋斗","不可预料"};
+    private List<Friend> friendList = new ArrayList<Friend>();
+
+//    private String [] dialog = {"蛤蛤","吼啊","资瓷","长者","华莱士","大新闻","谈笑风生","批判","跑得快","西方国家","excited","闷声","发大财","无可奉告","负责任","professor","赛艇","天气晴朗","微小工作","另请高明","念两句诗","历史进程","个人奋斗","不可预料"};
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dialog_list);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(
+        initFriend();
+        FriendAdapter adapter = new FriendAdapter(DialogList.this,R.layout.dialog_list_item,friendList);
+        /*ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                 DialogList.this,android.R.layout.simple_list_item_1,dialog
-        );
+        );*/
 
         ListView listView = (ListView)findViewById(R.id.dialog_list);
         listView.setAdapter(adapter);
@@ -30,6 +37,15 @@ public class DialogList extends AppCompatActivity {
 
             }
         });
+    }
+
+    private void initFriend(){
+        Friend friend1 = new Friend("长者");
+        friendList.add(friend1);
+        Friend friend2 = new Friend("华莱士");
+        friendList.add(friend2);
+        Friend friend3 = new Friend("董先森");
+        friendList.add(friend3);
     }
 
 }
