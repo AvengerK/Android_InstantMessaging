@@ -26,7 +26,12 @@ public class FriendAdapter extends ArrayAdapter<Friend> {
     @Override
     public View getView(int position,View convertView,ViewGroup parent){
         Friend friend = getItem(position);
-        View view = LayoutInflater.from(getContext()).inflate(resourceId, null);
+        View view;
+        if(convertView == null){
+            view = LayoutInflater.from(getContext()).inflate(resourceId,null);
+        }else{
+            view = convertView;
+        }
 
         TextView friendName = (TextView)view.findViewById(R.id.friend_name);
         friendName.setText(friend.getName());
