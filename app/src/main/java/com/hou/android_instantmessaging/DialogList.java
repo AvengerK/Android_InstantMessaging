@@ -10,7 +10,7 @@ import android.widget.ListView;
  */
 public class DialogList extends AppCompatActivity {
 
-    private String [] dialog = {"毛泽东","胡锦涛","江泽民","习近平","邓小平","赵紫阳","胡耀邦","华国锋","杨尚昆"};
+    private String [] dialog = {"蛤蛤","吼啊","资瓷","长者","华莱士","大新闻","谈笑风生","批判","跑得快","西方国家","excited","闷声","发大财","无可奉告","负责任","professor","赛艇","天气晴朗","微小工作","另请高明","念两句诗","历史进程","个人奋斗","不可预料"};
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -23,4 +23,5 @@ public class DialogList extends AppCompatActivity {
         ListView listView = (ListView)findViewById(R.id.dialog_list);
         listView.setAdapter(adapter);
     }
+
 }
