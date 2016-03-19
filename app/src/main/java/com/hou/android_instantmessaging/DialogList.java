@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.hou.android_instantmessaging.toolClass.Friend;
 import com.hou.android_instantmessaging.toolClass.FriendAdapter;
@@ -36,6 +37,8 @@ public class DialogList extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Friend friend = friendList.get(position);
+                Toast.makeText(DialogList.this,friend.getName(),Toast.LENGTH_SHORT).show();
 
             }
         });

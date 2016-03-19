@@ -8,9 +8,9 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.hou.android_instantmessaging.R;
-import com.hou.android_instantmessaging.toolClass.Friend;
+//import com.hou.android_instantmessaging.toolClass.Friend;
 
-import org.w3c.dom.Text;
+//import org.w3c.dom.Text;
 
 import java.util.List;
 
