@@ -1,5 +1,6 @@
 package com.hou.android_instantmessaging;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -39,7 +40,8 @@ public class DialogList extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Friend friend = friendList.get(position);
                 Toast.makeText(DialogList.this,friend.getName(),Toast.LENGTH_SHORT).show();
-
+                Intent intent = new Intent(DialogList.this,Dialog.class);
+                startActivity(intent);
             }
         });
     }
