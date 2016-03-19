@@ -10,6 +10,8 @@ import android.widget.TextView;
 import com.hou.android_instantmessaging.R;
 import com.hou.android_instantmessaging.toolClass.Friend;
 
+import org.w3c.dom.Text;
+
 import java.util.List;
 
 /**
@@ -27,14 +29,24 @@ public class FriendAdapter extends ArrayAdapter<Friend> {
     public View getView(int position,View convertView,ViewGroup parent){
         Friend friend = getItem(position);
         View view;
+        ViewHolder viewHolder;
         if(convertView == null){
             view = LayoutInflater.from(getContext()).inflate(resourceId,null);
+            viewHolder = new ViewHolder();
+            viewHolder.friendName = (TextView)view.findViewById(R.id.friend_name);
+            view.setTag(viewHolder);
         }else{
             view = convertView;
+            viewHolder = (ViewHolder)view.getTag();
         }
 
-        TextView friendName = (TextView)view.findViewById(R.id.friend_name);
-        friendName.setText(friend.getName());
+        viewHolder.friendName.setText(friend.getName());
+//        TextView friendName = (TextView)view.findViewById(R.id.friend_name);
+//        friendName.setText(friend.getName());
         return view;
+    }
+
+    class ViewHolder{
+        TextView friendName;
     }
 }
